@@ -1,0 +1,95 @@
+/* Custom keyframe animations and utility styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Deep Space Smooth Moving Cyber Grid */
+@keyframes gridFlow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(168, 85, 247, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.10) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridFlow 20s linear infinite;
+}
+
+/* Glowing Scanning Laser Beam */
+@keyframes scanline {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  40%, 60% {
+    opacity: 0.75;
+  }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Radial Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 7s ease-in-out infinite;
+}
